@@ -821,7 +821,7 @@ a {
 
   /* Hero Section */
   .hero {
-    min-height: 60vh;
+    min-height: 50vh;
     padding: 50px 15px;
   }
 
@@ -966,4 +966,5 @@ a {
     width: 350px;
   }
 }
+
 
