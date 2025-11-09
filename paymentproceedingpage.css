@@ -1,0 +1,200 @@
+/* Google Font */
+@import url("https://fonts.cdnfonts.com/css/google-sans");
+
+/* ----------------------------
+   Base Reset
+----------------------------- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Product Sans", sans-serif;
+  background-color: #f5f1dc; /* soft beige */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 20px;
+  animation: appear 1s ease-in-out;
+}
+
+/* ----------------------------
+   Container
+----------------------------- */
+.paymentproceeding .container {
+  max-width: 500px;
+  width: 100%;
+}
+
+/* ----------------------------
+   Grid / Card
+----------------------------- */
+.payment-grid {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.payment-card {
+  width: 80%;
+}
+
+.payment-card form fieldset {
+  border: 2px solid #73c8d2;
+  border-radius: 20px;
+  padding: 30px;
+  background-color: #fff;
+  box-shadow: 0 8px 20px rgba(115, 200, 210, 0.3);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.payment-card form fieldset:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(115, 200, 210, 0.4);
+}
+
+/* ----------------------------
+   Section Title
+----------------------------- */
+.section-title {
+  font-size: 1.8rem;
+  text-align: center;
+  color: #0046ff;
+  margin-bottom: 20px;
+}
+
+/* ----------------------------
+   Payment Image
+----------------------------- */
+.payment-image {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.payment-image img {
+  height: 120px;
+  width: 120px;
+  object-fit: contain;
+  margin-bottom: 15px;
+  transition: transform 0.3s ease;
+}
+
+.payment-image img:hover {
+  transform: scale(1.05);
+}
+
+.payment-image p {
+  text-align: center;
+  font-size: 15px;
+  color: #444;
+  line-height: 1.5;
+}
+
+/* ----------------------------
+   Input Styling
+----------------------------- */
+input[type="text"] {
+  width: 90%;
+  padding: 10px 15px;
+  margin: 10px 0 20px 0;
+  border: 2px solid #73c8d2;
+  border-radius: 12px;
+  font-size: 16px;
+  outline: none;
+  transition: all 0.3s ease;
+}
+
+input[type="text"]:focus {
+  border-color: #0046ff;
+  box-shadow: 0 0 8px rgba(0, 70, 255, 0.3);
+}
+
+/* ----------------------------
+   Button Styling
+----------------------------- */
+button {
+  background-color: #0046ff;
+  border: none;
+  border-radius: 25px;
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 10px rgba(115, 200, 210, 0.4);
+}
+
+button a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: 600;
+}
+
+button:hover {
+  background-color: #73c8d2;
+  transform: translateY(-3px);
+  box-shadow: 0 6px 15px rgba(0, 70, 255, 0.3);
+}
+
+/* ----------------------------
+   Animations
+----------------------------- */
+@keyframes appear {
+  from {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ----------------------------
+   Responsive Design
+----------------------------- */
+@media (max-width: 768px) {
+  .payment-card form fieldset {
+    padding: 25px;
+  }
+
+  .payment-image img {
+    height: 100px;
+    width: 100px;
+  }
+
+  .payment-image p {
+    font-size: 14px;
+  }
+
+  input[type="text"] {
+    width: 95%;
+  }
+}
+
+@media (max-width: 480px) {
+  .payment-card form fieldset {
+    padding: 20px;
+  }
+
+  .payment-image img {
+    height: 90px;
+    width: 90px;
+  }
+
+  .payment-image p {
+    font-size: 13px;
+  }
+
+  input[type="text"] {
+    font-size: 14px;
+    padding: 8px 12px;
+  }
+
+  button a {
+    font-size: 14px;
+  }
+}
